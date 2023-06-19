@@ -30,6 +30,11 @@ const app = Vue.createApp({
                 }
             ]
         }
+    },
+    methods:{
+        setCurrentIndex(targetIndex) {
+            this.currentIndex = targetIndex;
+        }
     }
 });
 
