@@ -22,11 +22,11 @@
         <div id="carousel">
             <i class="fa-regular fa-circle-left fa-xl" id="prev"></i>
             <div class="gallery">
-                <figure>
-                    <img src="img/01.webp" alt="" class="active">
+                <figure v-for="(pictures, i) in pictures" v-show="currentIndex === i">
+                    <img :src="pictures.images" :alt="pictures.title">
                     <figcaption>
-                        <h3>spiderman</h3>
-                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                        <h3>{{ pictures.title }}</h3>
+                        <p>{{ pictures.text }}</p>
                     </figcaption>
                 </figure>
             </div>
