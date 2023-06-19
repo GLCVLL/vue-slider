@@ -20,17 +20,17 @@
 <body>
     <div id="root" class="container">
         <div id="carousel">
-            <i class="fa-regular fa-circle-left fa-xl" id="prev"></i>
+            <i class="fa-regular fa-circle-left fa-xl" id="prev" @click="goToPrev" v-show="currentIndex"></i>
             <div class="gallery">
-                <figure v-for="(pictures, i) in pictures" v-show="currentIndex === i">
-                    <img :src="pictures.images" :alt="pictures.title">
+                <figure v-for="(picture, i) in pictures" v-show="currentIndex === i">
+                    <img :src="picture.image" :alt="picture.title">
                     <figcaption>
-                        <h3>{{ pictures.title }}</h3>
-                        <p>{{ pictures.text }}</p>
+                        <h3>{{ picture.title }}</h3>
+                        <p>{{ picture.text }}</p>
                     </figcaption>
                 </figure>
             </div>
-            <i class="fa-regular fa-circle-right fa-xl" id="next"></i>
+            <i class="fa-regular fa-circle-right fa-xl" id="next" @click="goToNext" v-show="!isLastPicture"></i>
         </div>
     </div>
 </body>
