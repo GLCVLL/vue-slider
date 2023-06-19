@@ -1,0 +1,52 @@
+#carousel{
+    height: 400px;
+    width: 700px;
+    margin: 30px auto;
+    position: relative;
+}
+
+#carousel .gallery{
+    height: 100%;
+}
+
+#carousel img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    display: none;
+}
+
+#carousel i{
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    color: black;
+    cursor: pointer;
+}
+
+#carousel #prev{
+    right: 105%;
+}
+
+#carousel #next{
+    left: 105%;
+}
+
+#carousel img.active{
+    display: block;
+}
+
+.gallery figure{
+    height: 100%;
+    position: relative;
+}
+
+figure figcaption{
+    position: absolute;
+    left: 10%;
+    color: white;
+    translate: -10% 0;
+    bottom: 0;
+}
+
